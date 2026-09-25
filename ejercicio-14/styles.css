@@ -1,0 +1,40 @@
+/* ===== Ejercicio 14: Variables CSS y temas ===== */
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #2980b9;
+  --color-fondo: #ffffff;
+  --color-texto: #222222;
+  --espaciado: 1rem;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: var(--espaciado);
+}
+
+.header {
+  background-color: var(--color-primario);
+  color: #fff;
+  padding: var(--espaciado);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--color-secundario);
+  color: #fff;
+  padding: var(--espaciado);
+  border-radius: 8px;
+  margin: var(--espaciado) 0;
+}
+
+/* Modo oscuro: se cambian las variables, no cada propiedad */
+.modo-oscuro {
+  --color-fondo: #1a1a1a;
+  --color-texto: #f0f0f0;
+  --color-primario: #0d1b2a;
+}

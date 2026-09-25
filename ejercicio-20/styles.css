@@ -1,0 +1,251 @@
+/* =====================================================
+   EJERCICIO 20 - LANDING PAGE COMPLETA
+   Índice:
+   1. Variables y reset
+   2. Header / Navbar
+   3. Hero
+   4. Servicios (Grid)
+   5. Testimonios (Carrusel con scroll-snap)
+   6. Formulario de contacto
+   7. Footer
+   8. Animaciones (@keyframes)
+   9. Media Queries (responsividad)
+===================================================== */
+
+/* ---------- 1. Variables y reset ---------- */
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #2980b9;
+  --color-acento: #f1c40f;
+  --color-fondo: #ffffff;
+  --color-texto: #222222;
+  --espaciado: 1rem;
+  --radio: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; /* scroll suave al navegar por anclas */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+h1, h2, h3 { margin: 0 0 0.5rem; }
+
+/* ---------- 2. Header / Navbar ---------- */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-primario);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espaciado) 2rem;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.logo span { color: var(--color-acento); }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover { color: var(--color-acento); }
+
+/* ---------- 3. Hero ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem 2rem;
+  color: #fff;
+  background: linear-gradient(rgba(44,62,80,0.75), rgba(44,62,80,0.75)),
+              url('https://picsum.photos/id/180/1600/900') center/cover no-repeat;
+}
+
+.hero-contenido {
+  max-width: 600px;
+  animation: aparecer 1s ease-out;
+}
+
+.btn-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--color-acento);
+  color: var(--color-primario);
+  font-weight: bold;
+  border-radius: var(--radio);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.btn-cta:hover { transform: translateY(-3px); }
+
+/* ---------- 4. Servicios (Grid) ---------- */
+.servicios {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espaciado);
+  margin-top: 2rem;
+}
+
+.servicio-card {
+  background-color: #f5f7f8;
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* ---------- 5. Testimonios (Carrusel con scroll-snap) ---------- */
+.testimonios {
+  padding: 4rem 1.5rem;
+  background-color: var(--color-primario);
+  color: #fff;
+  text-align: center;
+}
+
+.carrusel {
+  display: flex;
+  gap: var(--espaciado);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.testimonio {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+  background-color: rgba(255,255,255,0.08);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  margin: 0;
+}
+
+.testimonio footer {
+  margin-top: 0.8rem;
+  font-style: italic;
+  color: var(--color-acento);
+}
+
+/* ---------- 6. Formulario de contacto ---------- */
+.contacto {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.formulario-contacto {
+  max-width: 450px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.campo { display: flex; flex-direction: column; }
+
+.campo label { margin-bottom: 0.3rem; font-weight: bold; }
+
+.campo input, .campo textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radio);
+  transition: border-color 0.3s ease;
+}
+
+.campo input:focus, .campo textarea:focus {
+  border-color: var(--color-secundario);
+  outline: none;
+}
+
+.formulario-contacto button {
+  background-color: var(--color-secundario);
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #1f618d;
+}
+
+/* ---------- 7. Footer ---------- */
+.footer {
+  background-color: var(--color-primario);
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+/* ---------- 8. Animaciones ---------- */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- 9. Media Queries ---------- */
+@media (max-width: 1024px) {
+  .grid-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none; /* simplificación: en un caso real se agregaría un menú hamburguesa (ver Ejercicio 17) */
+  }
+
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonio {
+    flex: 0 0 90%;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,15 @@
+/* ===== Ejercicio 7: Modelo de caja (Box Model) ===== */
+.contenedor {
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  padding: 20px;
+  border: 3px solid #2c3e50;
+  background-color: #ecf0f1;
+  box-sizing: border-box; /* asegura que padding y border no aumenten el tamaño final */
+}

@@ -1,0 +1,25 @@
+/* ===== Ejercicio 2: Listas y enlaces ===== */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #222;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+ol, ul {
+  line-height: 1.7;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

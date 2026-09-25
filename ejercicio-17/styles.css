@@ -1,0 +1,65 @@
+/* ===== Ejercicio 17: Menú hamburguesa (solo CSS) ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  padding: 1rem;
+  position: relative;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none; /* checkbox oculto */
+}
+
+.menu-icono {
+  display: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .menu-icono {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  /* Truco del checkbox: al marcarse, despliega el menú */
+  .menu-toggle:checked ~ .nav-links {
+    max-height: 300px;
+  }
+
+  .nav-links li {
+    padding: 0.8rem 1rem;
+  }
+}

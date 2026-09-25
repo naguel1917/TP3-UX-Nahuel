@@ -1,0 +1,54 @@
+/* ===== Ejercicio 15: Diseño responsivo con Media Queries =====
+   Enfoque: Desktop first. Se justifica porque se parte del layout
+   de escritorio del Ejercicio 10 y se lo adapta hacia pantallas chicas. */
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header  header"
+    "sidebar contenido"
+    "footer  footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 1fr 60px;
+  min-height: 100vh;
+  gap: 0.5rem;
+}
+
+.header, .sidebar, .contenido, .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.header    { grid-area: header;    background:#2c3e50; color:#fff; }
+.sidebar   { grid-area: sidebar;   background:#34495e; color:#fff; }
+.contenido { grid-area: contenido; background:#ecf0f1; }
+.footer    { grid-area: footer;    background:#2c3e50; color:#fff; }
+
+/* Breakpoint 1: tablets - el sidebar se angosta */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 140px 1fr;
+  }
+}
+
+/* Breakpoint 2: móviles - el sidebar desaparece y todo pasa a una columna */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-areas:
+      "header"
+      "contenido"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+html, body {
+  margin: 0;
+  overflow-x: hidden; /* evita overflow horizontal en la transición */
+}

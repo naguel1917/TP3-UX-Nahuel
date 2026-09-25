@@ -1,0 +1,47 @@
+/* ===== Ejercicio 12: Posicionamiento ===== */
+
+/* Botón fijo "volver arriba" */
+.volver-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  z-index: 10;
+}
+
+/* Contenedor padre del tooltip */
+.tooltip-contenedor {
+  position: relative;
+  display: inline-block;
+  background-color: #ecf0f1;
+  padding: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Tooltip oculto por defecto */
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.tooltip-contenedor:hover .tooltip {
+  visibility: visible;
+}

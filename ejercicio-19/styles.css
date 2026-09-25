@@ -1,0 +1,63 @@
+/* ===== Ejercicio 19: Formulario multi-step con validación visual ===== */
+.registro {
+  max-width: 400px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Truco de :target: cada paso se muestra solo cuando es el destino del enlace */
+.paso {
+  display: none;
+  flex-direction: column;
+  gap: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+#paso1:target,
+#paso2:target {
+  display: flex;
+}
+
+/* Paso 1 visible por defecto (sin hash en la URL) */
+#paso1 {
+  display: flex;
+}
+#paso1:target ~ #paso1 {
+  display: none;
+}
+
+input {
+  padding: 0.6rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Feedback visual de validación nativa */
+input:valid {
+  border-color: #27ae60;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #c0392b;
+}
+
+.btn-siguiente, .btn-volver {
+  display: inline-block;
+  text-align: center;
+  padding: 0.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  background-color: #2980b9;
+  color: #fff;
+}
+
+button[type="submit"] {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}

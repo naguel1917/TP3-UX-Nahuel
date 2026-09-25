@@ -1,0 +1,32 @@
+/* ===== Ejercicio 6: Selectores CSS ===== */
+
+/* Selector de clase */
+.card {
+  background-color: #eef6f9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Selector descendiente: p dentro de .card */
+.card p {
+  color: #1b6ca8;
+  font-weight: bold;
+}
+
+/* Selector de ID */
+#destacado {
+  border: 2px dashed #e67e22;
+  padding: 1rem;
+}
+
+/* Selector de clase adicional */
+.nota {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* Selector de etiqueta */
+span {
+  background-color: yellow;
+}

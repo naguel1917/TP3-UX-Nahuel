@@ -1,0 +1,31 @@
+/* ===== Ejercicio 9: Flexbox - galería de tarjetas ===== */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.producto {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  flex: 1 1 200px; /* flex-grow, flex-shrink, flex-basis */
+  max-width: 220px;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.producto button {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}

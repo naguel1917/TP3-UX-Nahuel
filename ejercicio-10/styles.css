@@ -1,0 +1,24 @@
+/* ===== Ejercicio 10: CSS Grid - layout de página ===== */
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header  header"
+    "sidebar contenido"
+    "footer  footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 1fr 60px;
+  min-height: 100vh;
+  gap: 0.5rem;
+}
+
+.header   { grid-area: header;   background:#2c3e50; color:#fff; }
+.sidebar  { grid-area: sidebar;  background:#34495e; color:#fff; }
+.contenido{ grid-area: contenido;background:#ecf0f1; }
+.footer   { grid-area: footer;   background:#2c3e50; color:#fff; }
+
+.header, .sidebar, .contenido, .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}

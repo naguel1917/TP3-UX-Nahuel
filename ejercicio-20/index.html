@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 20 - Landing Page completa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Marca<span>UX</span></div>
+      <ul class="nav-links">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-contenido">
+        <h1>Diseñamos experiencias digitales memorables</h1>
+        <p>Convertimos ideas en productos digitales simples, accesibles y hermosos.</p>
+        <a href="#contacto" class="btn-cta">Empezar ahora</a>
+      </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+      <h2>Nuestros servicios</h2>
+      <div class="grid-servicios">
+        <article class="servicio-card">
+          <h3>Diseño UX</h3>
+          <p>Investigación y arquitectura de la experiencia del usuario.</p>
+        </article>
+        <article class="servicio-card">
+          <h3>Diseño UI</h3>
+          <p>Interfaces visuales consistentes y accesibles.</p>
+        </article>
+        <article class="servicio-card">
+          <h3>Desarrollo Frontend</h3>
+          <p>Maquetado semántico, responsivo y de alto rendimiento.</p>
+        </article>
+        <article class="servicio-card">
+          <h3>Consultoría</h3>
+          <p>Auditorías de usabilidad y mejora continua de producto.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimonios" class="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="carrusel">
+        <blockquote class="testimonio">
+          <p>"El equipo transformó por completo nuestra plataforma."</p>
+          <footer>— Lucía G.</footer>
+        </blockquote>
+        <blockquote class="testimonio">
+          <p>"Excelente atención y resultados medibles."</p>
+          <footer>— Marcos R.</footer>
+        </blockquote>
+        <blockquote class="testimonio">
+          <p>"Un antes y un después en nuestra usabilidad."</p>
+          <footer>— Ana P.</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contactanos</h2>
+      <form class="formulario-contacto" action="#" method="post">
+        <div class="campo">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campo">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 MarcaUX. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

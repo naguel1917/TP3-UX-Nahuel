@@ -1,0 +1,11 @@
+/* ===== Ejercicio 5: Primeros estilos CSS ===== */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fdf6e3;
+  color: #333;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+}
